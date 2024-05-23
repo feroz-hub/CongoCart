@@ -7,28 +7,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "Services\Catalog\Catalog.Api\Catalog.Api.csproj", "{46F51EDF-C8C5-463D-9831-6144E9DB6B73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Api", "Services\Catalog\Catalog.Api\Catalog.Api.csproj", "{46F51EDF-C8C5-463D-9831-6144E9DB6B73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Core", "Services\Catalog\Catalog.Core\Catalog.Core.csproj", "{9C01B4EA-1834-484E-8BCB-E502CB73F6CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Core", "Services\Catalog\Catalog.Core\Catalog.Core.csproj", "{9C01B4EA-1834-484E-8BCB-E502CB73F6CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Application", "Services\Catalog\Catalog.Application\Catalog.Application.csproj", "{CF2E9A7E-B66D-4462-B359-9AD670A544D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Application", "Services\Catalog\Catalog.Application\Catalog.Application.csproj", "{CF2E9A7E-B66D-4462-B359-9AD670A544D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Infrastructure", "Services\Catalog\Catalog.Infrastructure\Catalog.Infrastructure.csproj", "{B10D6C03-35DF-4602-A642-A6F9D93EF1BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Infrastructure", "Services\Catalog\Catalog.Infrastructure\Catalog.Infrastructure.csproj", "{B10D6C03-35DF-4602-A642-A6F9D93EF1BD}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D239129B-F55B-497A-B752-A6900EF17772}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{FFA96EED-82D9-4F48-9ADD-264C02CD5A8E} = {B2649491-AAA1-4082-9B6B-255E5414BC26}
-		{46F51EDF-C8C5-463D-9831-6144E9DB6B73} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
-		{9C01B4EA-1834-484E-8BCB-E502CB73F6CA} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
-		{CF2E9A7E-B66D-4462-B359-9AD670A544D0} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
-		{B10D6C03-35DF-4602-A642-A6F9D93EF1BD} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{46F51EDF-C8C5-463D-9831-6144E9DB6B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -47,5 +39,19 @@ Global
 		{B10D6C03-35DF-4602-A642-A6F9D93EF1BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B10D6C03-35DF-4602-A642-A6F9D93EF1BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B10D6C03-35DF-4602-A642-A6F9D93EF1BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D239129B-F55B-497A-B752-A6900EF17772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D239129B-F55B-497A-B752-A6900EF17772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D239129B-F55B-497A-B752-A6900EF17772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D239129B-F55B-497A-B752-A6900EF17772}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FFA96EED-82D9-4F48-9ADD-264C02CD5A8E} = {B2649491-AAA1-4082-9B6B-255E5414BC26}
+		{46F51EDF-C8C5-463D-9831-6144E9DB6B73} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
+		{9C01B4EA-1834-484E-8BCB-E502CB73F6CA} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
+		{CF2E9A7E-B66D-4462-B359-9AD670A544D0} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
+		{B10D6C03-35DF-4602-A642-A6F9D93EF1BD} = {FFA96EED-82D9-4F48-9ADD-264C02CD5A8E}
 	EndGlobalSection
 EndGlobal
