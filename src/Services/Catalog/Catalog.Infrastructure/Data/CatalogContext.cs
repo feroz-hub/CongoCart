@@ -1,5 +1,3 @@
-using Microsoft.Extensions.Configuration;
-
 namespace Catalog.Infrastructure.Data;
 
 public class CatalogContext:ICatalogContext
@@ -20,6 +18,4 @@ public class CatalogContext:ICatalogContext
         CatalogContextSeed.SeedData(Products);
         
     }
-    
-
 }
