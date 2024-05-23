@@ -1,0 +1,38 @@
+[
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a1",
+    "Name": "Apple",
+    "Description": "Technology and consumer electronics brand",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a2",
+    "Name": "Samsung",
+    "Description": "Leading manufacturer of smartphones and consumer electronics",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a3",
+    "Name": "Sony",
+    "Description": "Global leader in electronics and entertainment",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a4",
+    "Name": "Microsoft",
+    "Description": "Global technology company known for software, hardware, and services",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a5",
+    "Name": "Google",
+    "Description": "Multinational technology company specializing in Internet-related services",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a6",
+    "Name": "Dell",
+    "Description": "American multinational computer technology company",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  }
+]

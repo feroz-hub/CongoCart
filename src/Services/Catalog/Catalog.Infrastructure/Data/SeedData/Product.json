@@ -1,0 +1,56 @@
+[
+  {
+    "Name": "iPhone 13",
+    "Summary": "The latest iPhone with advanced features",
+    "Description": "iPhone 13 comes with a new design, A15 Bionic chip, and improved camera system.",
+    "ImageFile": "iphone13.png",
+    "BrandId": "60d5ec49f8a53026e0b4d1a1",
+    "TypeId": "60d5ec49f8a53026e0b4d1a4",
+    "Price": 799.00
+  },
+  {
+    "Name": "Samsung Galaxy S21",
+    "Summary": "The latest Galaxy smartphone with cutting-edge technology",
+    "Description": "Galaxy S21 features a powerful Exynos 2100 processor, 108MP camera, and stunning display.",
+    "ImageFile": "galaxys21.png",
+    "BrandId": "60d5ec49f8a53026e0b4d1a2",
+    "TypeId": "60d5ec49f8a53026e0b4d1a4",
+    "Price": 699.00
+  },
+  {
+    "Name": "Sony WH-1000XM4",
+    "Summary": "Industry-leading noise-cancelling headphones",
+    "Description": "The Sony WH-1000XM4 offers superior sound quality, comfort, and noise-cancellation.",
+    "ImageFile": "sonywh1000xm4.png",
+    "BrandId": "60d5ec49f8a53026e0b4d1a3",
+    "TypeId": "60d5ec49f8a53026e0b4d1a6",
+    "Price": 349.99
+  },
+  {
+    "Name": "Microsoft Surface Pro 7",
+    "Summary": "Versatile 2-in-1 laptop and tablet",
+    "Description": "Surface Pro 7 combines the portability of a tablet with the performance of a laptop.",
+    "ImageFile": "surfacepro7.png",
+    "BrandId": "60d5ec49f8a53026e0b4d1a4",
+    "TypeId": "60d5ec49f8a53026e0b4d1a7",
+    "Price": 899.99
+  },
+  {
+    "Name": "Google Pixel 5",
+    "Summary": "Flagship smartphone with exceptional camera capabilities",
+    "Description": "Pixel 5 features a stunning camera system, 5G connectivity, and Google's latest AI innovations.",
+    "ImageFile": "googlepixel5.png",
+    "BrandId": "60d5ec49f8a53026e0b4d1a5",
+    "TypeId": "60d5ec49f8a53026e0b4d1a4",
+    "Price": 699.00
+  },
+  {
+    "Name": "Dell XPS 13",
+    "Summary": "Premium ultrabook with stunning InfinityEdge display",
+    "Description": "XPS 13 offers exceptional performance in a compact and beautifully designed package.",
+    "ImageFile": "dellxps13.png",
+    "BrandId": "60d5ec49f8a53026e0b4d1a6",
+    "TypeId": "60d5ec49f8a53026e0b4d1a5",
+    "Price": 1199.99
+  }
+]

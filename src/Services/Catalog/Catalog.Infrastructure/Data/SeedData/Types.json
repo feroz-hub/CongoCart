@@ -1,0 +1,39 @@
+[
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a4",
+    "Name": "Smartphone",
+    "Description": "Portable personal computing devices with mobile OS",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a5",
+    "Name": "Laptop",
+    "Description": "Portable personal computers",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a6",
+    "Name": "Headphones",
+    "Description": "Audio listening devices",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a7",
+    "Name": "Tablet",
+    "Description": "Portable computing device with touchscreen interface",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a8",
+    "Name": "Smartwatch",
+    "Description": "Wearable device with smart capabilities",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Id": "60d5ec49f8a53026e0b4d1a9",
+    "Name": "Monitor",
+    "Description": "Display screen for computers or other electronic devices",
+    "CreatedDate": "2024-01-01T00:00:00Z"
+  }
+  
+]
