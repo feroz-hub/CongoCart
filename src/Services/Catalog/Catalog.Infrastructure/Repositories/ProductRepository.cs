@@ -2,14 +2,30 @@ namespace Catalog.Infrastructure.Repositories;
 
 public class ProductRepository(ICatalogContext catalogContext):IProductRepository
 {
-    public async Task<IEnumerable<Product>> GetAllProducts()
+    public async Task<IEnumerable<Product>> GetAllProducts(int pageNumber,int pageSize)
     {
-        return await catalogContext.Products.Find(_ => true).ToListAsync();
+        var products = await catalogContext.Products
+            .Find(_ => true)
+            .Skip((pageNumber - 1) * pageSize)
+            .Limit(pageSize)
+            .ToListAsync();
+
+        foreach (var product in products)
+        {
+            product.Brand = await catalogContext.Brands.Find(b => b.Id == product.BrandId).FirstOrDefaultAsync();
+            product.Type = await catalogContext.Types.Find(t => t.Id == product.TypeId).FirstOrDefaultAsync();
+        }
+
+        return products;
     }
 
     public async Task<Product?> GetProductById(string id)
     {
-        return await catalogContext.Products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        var product= await catalogContext.Products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        if (product is null) return null;
+        product.Brand = await catalogContext.Brands.Find(b => b.Id == product.BrandId).FirstOrDefaultAsync();
+        product.Type = await catalogContext.Types.Find(t => t.Id == product.TypeId).FirstOrDefaultAsync();
+        return product;
     }
 
     public async Task<Product> CreateProduct(Product product)
@@ -30,13 +46,44 @@ public class ProductRepository(ICatalogContext catalogContext):IProductRepositor
         return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
     }
 
-    public async Task<IEnumerable<Product>> GetProductsByName(string name)
+    public async Task<IEnumerable<Product>> GetProductsByName(string name,int? pageNumber,int? pageSize)
     {
-        return await catalogContext.Products.Find(p => p.Name.ToLower().Contains(name.ToLower())).ToListAsync();
+        var products= await catalogContext.Products.Find(p => p.Name.ToLower().Contains(name.ToLower())).Skip((pageNumber - 1) * pageSize)
+            .Limit(pageSize).ToListAsync();
+        foreach (var product in products)
+        {
+            product.Brand = await catalogContext.Brands.Find(b => b.Id == product.BrandId).FirstOrDefaultAsync();
+            product.Type = await catalogContext.Types.Find(t => t.Id == product.TypeId).FirstOrDefaultAsync();
+        }
+
+        return products;
     }
 
-    public async Task<IEnumerable<Product>> GetProductsByBrand(string brandId)
+    public async Task<IEnumerable<Product>> GetProductsByBrand(string brandId,int? pageNumber,int? pageSize)
     {
-        return await catalogContext.Products.Find(p => p.BrandId == brandId).ToListAsync();
+        var products= await catalogContext.Products .Find(p => p.BrandId == brandId)
+            .Skip((pageNumber - 1) * pageSize)
+            .Limit(pageSize)
+            .ToListAsync();
+        foreach (var product in products)
+        {
+            product.Brand = await catalogContext.Brands.Find(b => b.Id == product.BrandId).FirstOrDefaultAsync();
+            product.Type = await catalogContext.Types.Find(t => t.Id == product.TypeId).FirstOrDefaultAsync();
+        }
+        return products;
+    }
+    public async Task<IEnumerable<Product>> GetProductsByType(string typeId, int? pageNumber, int? pageSize)
+    {
+        var products= await catalogContext.Products
+            .Find(p => p.TypeId == typeId)
+            .Skip((pageNumber - 1) * pageSize)
+            .Limit(pageSize)
+            .ToListAsync();
+        foreach (var product in products)
+        {
+            product.Brand = await catalogContext.Brands.Find(b => b.Id == product.BrandId).FirstOrDefaultAsync();
+            product.Type = await catalogContext.Types.Find(t => t.Id == product.TypeId).FirstOrDefaultAsync();
+        }
+        return products;
     }
 }

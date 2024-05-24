@@ -12,6 +12,7 @@ public static class DependencyInjection
         {
             cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly());
             cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+            cfg.AddOpenBehavior(typeof(QueryValidationBehaviour<,>));
             cfg.AddOpenBehavior(typeof(LoggingBehaviour<,>));
         });
         MapsterConfiguration.RegisterMappings();

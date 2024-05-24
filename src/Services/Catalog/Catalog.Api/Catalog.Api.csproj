@@ -30,4 +30,9 @@
       <ProjectReference Include="..\Catalog.Infrastructure\Catalog.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="CatalogApis\ProductsApi\" />
+      <Folder Include="CatalogApis\TypesApi\" />
+    </ItemGroup>
+
 </Project>

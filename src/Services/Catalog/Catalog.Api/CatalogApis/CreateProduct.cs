@@ -1,6 +1,12 @@
-namespace Catalog.Api.Endpoints;
+namespace Catalog.Api.CatalogApis;
 
-public record CreateOrderRequest(ProductDto ProductDto);
+public record CreateOrderRequest( string Name,
+    string Summary,
+    string Description,
+    string ImageFile,
+    string BrandId,
+    string TypeId,
+    decimal Price);
 
 public record CreateOrderResponse(Product Product);
 

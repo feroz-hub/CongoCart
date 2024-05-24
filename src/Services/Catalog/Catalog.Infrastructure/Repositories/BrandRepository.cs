@@ -2,9 +2,13 @@ namespace Catalog.Infrastructure.Repositories;
 
 public class BrandRepository(ICatalogContext catalogContext):IBrandRepository
 {
-    public async Task<IEnumerable<ProductBrand>> GetAllBrands()
+    public async Task<IEnumerable<ProductBrand>> GetAllBrands(int pageNumber,int pageSize)
     {
-        return await catalogContext.Brands.Find(_ => true).ToListAsync();
+        return await catalogContext.Brands
+            .Find(_ => true)
+            .Skip(pageSize * (pageNumber - 1))
+            .Limit(pageSize)
+            .ToListAsync();
     }
 
     public async Task<ProductBrand?> GetBrandById(string id)
@@ -28,5 +32,9 @@ public class BrandRepository(ICatalogContext catalogContext):IBrandRepository
     {
         var deleteResult = await catalogContext.Brands.DeleteOneAsync(brand => brand.Id == id);
         return deleteResult.IsAcknowledged && deleteResult.DeletedCount > 0;
+    }
+    public async Task<ProductBrand?> GetBrandByName(string name)
+    {
+        return await catalogContext.Brands.Find(brand => brand.Name == name).FirstOrDefaultAsync();
     }
 }

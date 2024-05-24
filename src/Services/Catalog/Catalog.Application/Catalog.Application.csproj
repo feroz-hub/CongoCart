@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Queries\" />
+      <Folder Include="Queries\Types\" />
     </ItemGroup>
 
 </Project>
