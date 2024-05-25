@@ -5,6 +5,8 @@ public class GetBrandByIdQueryHandler(IBrandRepository brandRepository) : IQuery
     public async Task<GetBrandByIdResult> Handle(GetBrandByIdQuery query, CancellationToken cancellationToken)
     {
         var brand = await brandRepository.GetBrandById(query.Id);
+        if (brand is null)
+            throw new BrandNotFoundException(query.Id);
         return new GetBrandByIdResult(brand);
     }
 }

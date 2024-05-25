@@ -6,7 +6,7 @@ public class GetBrandByName : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/brand/name/{name}", async (string name, ISender sender) =>
+        app.MapGet("/brands/name/{name}", async (string name, ISender sender) =>
             {
                 var query = new GetBrandByNameQuery(name);
                 var result = await sender.Send(query);

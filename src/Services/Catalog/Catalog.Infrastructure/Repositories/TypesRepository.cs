@@ -2,9 +2,9 @@ namespace Catalog.Infrastructure.Repositories;
 
 public class TypesRepository(ICatalogContext catalogContext):ITypesRepository
 {
-    public async Task<IEnumerable<ProductType>> GetAllTypes()
+    public async Task<IEnumerable<ProductType>> GetAllTypes(CancellationToken cancellationToken)
     {
-        return await catalogContext.Types.Find(_ => true).ToListAsync();
+        return await catalogContext.Types.Find(_ => true).ToListAsync(cancellationToken);
     }
 
     public async Task<ProductType?> GetTypeById(string id)

@@ -1,5 +1,3 @@
-using Catalog.Application.Exceptions;
-
 namespace Catalog.Application.Commands.UpdateBrand;
 
 public class UpdateBrandHandler(IBrandRepository brandRepository):ICommandHandler<UpdateBrandCommand,UpdateBrandResult>

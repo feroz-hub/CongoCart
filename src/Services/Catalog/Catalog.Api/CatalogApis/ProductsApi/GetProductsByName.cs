@@ -1,4 +1,4 @@
-namespace Catalog.Api.CatalogApis;
+namespace Catalog.Api.CatalogApis.ProductsApi;
 
 public record GetProductsByNameRequest(string Name, int? PageNumber = 1, int PageSize = 10);
 public record GetProductsByNameResponse(IEnumerable<Product> Products);

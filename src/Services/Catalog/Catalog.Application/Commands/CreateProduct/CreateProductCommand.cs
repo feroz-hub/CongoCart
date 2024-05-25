@@ -10,3 +10,4 @@ public record CreateProductCommand(string Name,
     decimal Price) : ICommand<CreateProductResult>;
 
 public record CreateProductResult(Product Product);
+

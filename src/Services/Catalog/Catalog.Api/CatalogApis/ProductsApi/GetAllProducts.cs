@@ -1,7 +1,7 @@
-namespace Catalog.Api.CatalogApis;
+namespace Catalog.Api.CatalogApis.ProductsApi;
 
 public record GetAllProductsRequest(int? PageNumber, int? PageSize);
-public record GetAllProductsResponse(IEnumerable<Product> Products);
+public  record GetAllProductsResponse(IEnumerable<Product> Products);
 
 public class GetAllProducts:ICarterModule
 {

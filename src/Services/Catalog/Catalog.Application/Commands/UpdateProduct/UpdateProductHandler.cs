@@ -1,5 +1,3 @@
-using Catalog.Application.Exceptions;
-
 namespace Catalog.Application.Commands.UpdateProduct;
 
 public class UpdateProductHandler(IProductRepository productRepository):ICommandHandler<UpdateProductCommand,UpdateProductResult>

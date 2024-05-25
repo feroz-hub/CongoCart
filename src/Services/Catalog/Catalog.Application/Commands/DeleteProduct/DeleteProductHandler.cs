@@ -1,5 +1,3 @@
-using Catalog.Application.Exceptions;
-
 namespace Catalog.Application.Commands.DeleteProduct;
 
 public class DeleteProductCommandHandler(IProductRepository productRepository) : ICommandHandler<DeleteProductCommand, DeleteProductResult>

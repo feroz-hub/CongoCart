@@ -1,6 +1,4 @@
-using Catalog.Application.Commands.DeleteProduct;
-
-namespace Catalog.Api.CatalogApis;
+namespace Catalog.Api.CatalogApis.ProductsApi;
 
 public record DeleteProductResponse(bool IsSuccess);
 public class DeleteProduct : ICarterModule

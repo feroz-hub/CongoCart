@@ -1,4 +1,4 @@
-namespace Catalog.Api.CatalogApis;
+namespace Catalog.Api.CatalogApis.ProductsApi;
 
 public record UpdateProductRequest(
     string Id,

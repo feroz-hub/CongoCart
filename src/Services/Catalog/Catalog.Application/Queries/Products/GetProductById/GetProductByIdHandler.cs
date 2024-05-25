@@ -1,5 +1,3 @@
-using Catalog.Application.Exceptions;
-
 namespace Catalog.Application.Queries.Products.GetProductById;
 
 public class GetProductByIdQueryHandler(IProductRepository productRepository) : IQueryHandler<GetProductByIdQuery, GetProductByIdResult>

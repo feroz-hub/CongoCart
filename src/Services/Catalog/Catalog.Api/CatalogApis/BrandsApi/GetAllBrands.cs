@@ -6,7 +6,7 @@ public class GetAllBrands : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapGet("/brands", async ([AsParameters] GetAllProductsRequest request,ISender sender) =>
+        app.MapGet("/brands", async ([AsParameters] GetAllBrandsRequest request,ISender sender) =>
             {
                 var query = request.Adapt<GetAllBrandsQuery>();
                 var result = await sender.Send(query);

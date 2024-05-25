@@ -1,5 +1,3 @@
-using Catalog.Application.Exceptions;
-
 namespace Catalog.Application.Queries.Brands.GetBrandByName;
 
 public class GetBrandByNameQueryHandler(IBrandRepository brandRepository) : IQueryHandler<GetBrandByNameQuery, GetBrandByNameResult>
