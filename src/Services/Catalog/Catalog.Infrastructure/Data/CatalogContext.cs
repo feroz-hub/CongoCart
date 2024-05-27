@@ -8,7 +8,7 @@ public class CatalogContext:ICatalogContext
     public CatalogContext(IConfiguration configuration)
     {
         var client = new MongoClient(configuration.GetConnectionString("Database"));
-        var database = client.GetDatabase("DatabaseName");
+        var database = client.GetDatabase(configuration.GetConnectionString("DatabaseName"));
         Brands = database.GetCollection<ProductBrand>(configuration.GetConnectionString("BrandsCollection"));
         Types = database.GetCollection<ProductType>(configuration.GetConnectionString("TypesCollection"));
         Products = database.GetCollection<Product>(configuration.GetConnectionString("CollectionName"));
