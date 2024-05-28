@@ -28,4 +28,5 @@
       <ProjectReference Include="..\Catalog.Infrastructure\Catalog.Infrastructure.csproj" />
     </ItemGroup>
 
+  
 </Project>

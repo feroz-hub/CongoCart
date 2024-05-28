@@ -10,3 +10,5 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 app.UseApiService();
 app.Run();
+
+public partial class Program{}
