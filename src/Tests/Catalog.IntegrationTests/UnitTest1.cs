@@ -1,4 +1,4 @@
-namespace Catalog.Tests;
+namespace Catalog.IntegrationTests;
 
 public class UnitTest1
 {
