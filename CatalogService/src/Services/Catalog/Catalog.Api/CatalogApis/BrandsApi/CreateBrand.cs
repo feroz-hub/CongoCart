@@ -9,7 +9,7 @@ public class CreateBrand : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
     {
-        app.MapPost("/brands", async (CreateBrandRequest request, ISender sender) =>
+        app.MapPost("/brand", async (CreateBrandRequest request, ISender sender) =>
             {
                 var command = request.Adapt<CreateBrandCommand>();
                 var result = await sender.Send(command);
